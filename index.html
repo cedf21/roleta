@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+:root {
+  --timeRotate: 10s;
+}
+
+.crossRotate {
+    -webkit-transform: rotate(1070deg);
+     transform: rotate(1070deg);
+     transition-duration: var(--timeRotate);
+}
+
+.crossRotate1 {
+    -webkit-transform: rotate(1070deg);
+     transform: rotate(1070deg);
+     transition-duration: var(--timeRotate);
+}
+
+.crossRotate2 {
+    -webkit-transform: rotate(1040deg);
+     transform: rotate(1040deg);
+     transition-duration: var(--timeRotate);
+}
+
+.crossRotate3 {
+    -webkit-transform: rotate(1010deg);
+     transform: rotate(1010deg);
+     transition-duration: var(--timeRotate);
+}
+
+.crossRotate4 {
+    -webkit-transform: rotate(985deg);
+     transform: rotate(985deg);
+     transition-duration: var(--timeRotate);
+}
+
+.crossRotate5 {
+    -webkit-transform: rotate(965deg);
+     transform: rotate(965deg);
+     transition-duration: var(--timeRotate);
+}
+
+.crossRotate6 {
+    -webkit-transform: rotate(940deg);
+     transform: rotate(940deg);
+     transition-duration: var(--timeRotate);
+}
+
+.crossRotate7 {
+    -webkit-transform: rotate(910deg);
+     transform: rotate(910deg);
+     transition-duration: var(--timeRotate);
+}
+
+.crossRotate8 {
+    -webkit-transform: rotate(880deg);
+     transform: rotate(880deg);
+     transition-duration: var(--timeRotate);
+}
+
+.crossRotate9 {
+    -webkit-transform: rotate(855deg);
+     transform: rotate(855deg);
+     transition-duration: var(--timeRotate);
+}
+
+.crossRotate10 {
+    -webkit-transform: rotate(830deg);
+     transform: rotate(830deg);
+     transition-duration: var(--timeRotate);
+}
+
+.crossRotate11 {
+    -webkit-transform: rotate(800deg);
+     transform: rotate(800deg);
+     transition-duration: var(--timeRotate);
+}
+
+.crossRotate12 {
+    -webkit-transform: rotate(775deg);
+     transform: rotate(775deg);
+     transition-duration: var(--timeRotate);
+}
+
+
+.crossRotate13 {
+    -webkit-transform: rotate(743deg);
+     transform: rotate(743deg);
+     transition-duration: var(--timeRotate);
+}
+
+
+.crossRotate14 {
+    -webkit-transform: rotate(729deg);
+     transform: rotate(729deg);
+     transition-duration: var(--timeRotate);
+}
+
+
+.limpar{
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+     transform: rotate(0deg);
+     transition-duration: 0s;
+}
+.seta{
+    position:absolute;
+    top:90px;
+    left:300px;
+    z-index: 1000;
+}
+.main{
+    width:600px;
+    padding:50px;
+}
+#rodar{
+    position:absolute;
+    left:270px;
+    padding: 5px 30px;
+
+}
+    </style>
+    <script>
+        function limpar(){
+            document.querySelector(".teste").classList.add("limpar");    
+            
+        }
+
+    function load(){
+    document.getElementById("rodar").addEventListener("click",function(){
+        limpar()
+        setTimeout(function(){
+
+            var randomNumber= Math.floor(Math.random() * 13)+1;
+            document.querySelector(".teste").classList.remove("limpar"); 
+            document.querySelector(".teste").classList.add("crossRotate"+randomNumber);
+        },10);
+        
+    });
+}
+
+    document.addEventListener("DOMContentLoaded", load, false);
+    </script>
+</head>
+
+
+
+<body>
+<input type='button' id='rodar' value='Rodar'/><br/>
+    <div class='main'>
+        <img width='20' class='seta' src='img/seta.png'/>
+        <img class='teste' width='500' src='img/wheel.png' />
+    </div>
+</body>
+</html>
