@@ -7,7 +7,7 @@
     <style>
 
 :root {
-  --timeRotate: 10s;
+  --timeRotate: 2s;
 }
 
 .crossRotate {
@@ -138,7 +138,21 @@
         setTimeout(function(){
 
             var randomNumber= Math.floor(Math.random() * 13)+1;
-            document.querySelector(".teste").classList.remove("limpar"); 
+
+            var elem = document.querySelector(".teste");
+            elem.classList.remove("limpar"); 
+            
+            const classes = ["crossRotate","crossRotate1","crossRotate2","crossRotate3",
+            "crossRotate4","crossRotate5","crossRotate6","crossRotate7","crossRotate8",
+            "crossRotate9","crossRotate10","crossRotate11","crossRotate12","crossRotate13",
+            "crossRotate14",];
+            
+            classes.forEach(c => {
+            if (elem.classList.contains(c)) {
+                elem.classList.remove(c);
+            }
+            })
+
             document.querySelector(".teste").classList.add("crossRotate"+randomNumber);
         },10);
         
